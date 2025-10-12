@@ -180,56 +180,54 @@ footer {
     margin-bottom: 20px;
 }
 
-.biodata-slider {
-    display: flex; /* Membuat semua item berjajar ke samping */
-    overflow-x: auto; /* Mengaktifkan scroll horizontal */
-    padding-bottom: 20px; /* Memberi ruang untuk scrollbar agar tidak menutupi konten */
+.testimonial-slider {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 20px;
     width: 100%;
-    gap: 15px; /* Jarak antar kartu biodata */
-    /* Menyembunyikan scrollbar secara visual untuk estetika */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    gap: 15px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
-/* Menyembunyikan scrollbar untuk browser Webkit (Chrome, Safari) */
-.biodata-slider::-webkit-scrollbar {
+.testimonial-slider::-webkit-scrollbar {
     display: none;
 }
 
-.biodata-card {
-    flex: 0 0 280px; /* Kartu tidak akan menyusut, dengan lebar 280px */
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-    padding: 20px;
-    text-align: left; /* Teks sekarang rata kiri */
-    display: flex; /* Menggunakan flexbox untuk menata foto dan teks */
-    align-items: center; /* Menyusun item secara vertikal di tengah */
-    gap: 15px; /* Jarak antara foto dan teks */
+.testimonial-card {
+    flex: 0 0 300px; /* Lebar setiap kartu testimoni */
+    background-color: rgba(0, 0, 0, 0.4); /* Latar belakang semi-transparan */
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Jarak antar elemen di dalam kartu */
 }
 
-.biodata-photo {
-    width: 80px; /* Ukuran foto */
-    height: 80px;
-    border-radius: 50%; /* Membuat foto lingkaran */
-    object-fit: cover; /* Memastikan gambar mengisi area tanpa distorsi */
-    flex-shrink: 0; /* Mencegah foto menyusut */
-    object-position: center top;
+.star-rating {
+    color: #FFC700; /* Warna kuning emas untuk bintang */
+    font-size: 1rem;
 }
 
-.biodata-text {
-    flex-grow: 1; /* Membuat teks mengisi sisa ruang */
+.testimonial-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Jarak antara nama dan ikon centang */
 }
 
-.biodata-text h3 {
-    margin-top: 0;
-    margin-bottom: 5px; /* Kurangi margin bawah agar lebih dekat dengan NIM */
+.verified-icon {
+    color: #34d399; /* Warna hijau untuk ikon terverifikasi */
     font-size: 1.1rem;
 }
 
-.biodata-text p {
-    margin: 3px 0; /* Kurangi margin atas dan bawah pada paragraf */
+.testimonial-card p {
+    margin: 0;
     font-size: 0.9rem;
     color: #e0e0e0;
+    line-height: 1.5;
+    font-style: italic;
 }
 
 /* --- ANIMASI GOYANG UNTUK MENU --- */
